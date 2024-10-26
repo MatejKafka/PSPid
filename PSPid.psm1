@@ -225,9 +225,10 @@ function Format-PidStop([Parameter(ValueFromPipeline)][PidStop]$Stop) {
 }
 
 $VehicleTypeMap = @{
-    "0" = "🚋", "Red" # tram
-    "1" = "🚇", "Green" # metro
-    "3" = "🚌", "Blue" # bus
+    "0"  = "🚋", "Red" # tram
+    "1"  = "🚇", "Green" # metro
+    "3"  = "🚌", "Blue" # bus
+    "11" = "🚎", "Blue" # trolleybus
 }
 
 function Format-PidRoute($Route) {
