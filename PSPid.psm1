@@ -32,6 +32,15 @@ function Get-AuthHeaders() {
     }
 }
 
+function Get-PidStop([string]$Name) {
+    $Stops = irm "https://data.pid.cz/stops/json/stops.json" | % stopGroups
+    if (-not $Name) {
+        return $Stops
+    } else {
+        return $Stops | ? name -like $Name
+    }
+}
+
 function Invoke-Pid($Path, $QueryParams = @{}) {
     $QueryStrs = $QueryParams.GetEnumerator() | % {
         if ($_.Value -is [array]) {

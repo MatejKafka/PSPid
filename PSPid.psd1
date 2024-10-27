@@ -6,7 +6,7 @@
 
 	Description = 'PowerShell client for the Golemio API for the Prague public transport network.'
 
-	FunctionsToExport = @('Get-PidTrip', 'Format-PidTrip', 'Get-PidDeparture', 'Invoke-Pid', 'Set-PidToken')
+	FunctionsToExport = @('Get-PidTrip', 'Format-PidTrip', 'Get-PidDeparture', 'Invoke-Pid', 'Set-PidToken', 'Get-PidStop')
 	CmdletsToExport = @()
 	VariablesToExport = @()
 	AliasesToExport = @('pid')
